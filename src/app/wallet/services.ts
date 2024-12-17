@@ -46,7 +46,7 @@ export class WalletServices {
           .decrement("balance", data.amount);
 
         await trx(model.transaction).insert({
-          wallet_id: wallet.id,
+          wallet: wallet.id,
           amount: -data.amount,
           transactionType: Method.withdrawal,
           reference: generateReference(),

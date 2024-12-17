@@ -40,7 +40,7 @@ class WalletServices {
                     .where({ id: wallet.id })
                     .decrement("balance", data.amount);
                 await trx(database_1.model.transaction).insert({
-                    wallet_id: wallet.id,
+                    wallet: wallet.id,
                     amount: -data.amount,
                     transactionType: entity_1.Method.withdrawal,
                     reference: (0, helper_1.generateReference)(),
