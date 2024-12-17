@@ -1,4 +1,4 @@
-import { AuthUser } from "@/app/auth/entity";
+import { AuthUser } from "../../app/auth/entity";
 import { Request } from "express";
 export interface AuthRequest extends Request {
     user: AuthUser;

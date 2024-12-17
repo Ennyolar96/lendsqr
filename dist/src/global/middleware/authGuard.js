@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthGuard = void 0;
 const express_async_handler_1 = __importDefault(require("express-async-handler"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const services_1 = require("@/app/user/services");
+const services_1 = require("../../app/user/services");
 const userService = new services_1.UserServices();
 exports.AuthGuard = (0, express_async_handler_1.default)(async (req, res, next) => {
     try {

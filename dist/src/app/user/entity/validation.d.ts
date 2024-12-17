@@ -1,4 +1,4 @@
-import { FindOne } from "@/global/entity";
+import { FindOne } from "../../../global/entity";
 import { findOneUser } from "./interface";
 export declare class updateUser {
 }

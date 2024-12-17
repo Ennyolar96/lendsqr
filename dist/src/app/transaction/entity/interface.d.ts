@@ -1,4 +1,4 @@
-import { findMany, findOne } from "@/global/entity";
+import { findMany, findOne } from "../../../global/entity";
 export declare enum PaymentStatus {
     PENDING = "pending",
     FAILED = "failed",

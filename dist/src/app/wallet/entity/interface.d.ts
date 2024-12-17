@@ -1,4 +1,4 @@
-import { Role } from "@/app/user/entity";
+import { Role } from "../../../app/user/entity";
 export interface IWallet {
     id?: string;
     user: string;

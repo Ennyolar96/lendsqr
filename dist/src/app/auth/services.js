@@ -39,7 +39,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthService = void 0;
 const argon = __importStar(require("argon2"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const database_1 = require("@/global/database");
+const database_1 = require("../../global/database");
 class AuthService {
     async CreateNewUser(data) {
         try {

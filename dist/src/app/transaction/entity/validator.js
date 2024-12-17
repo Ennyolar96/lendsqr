@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindOneTransaction = exports.FindManyTransaction = void 0;
-const entity_1 = require("@/global/entity");
+const entity_1 = require("../../../global/entity");
 const interface_1 = require("./interface");
 const class_validator_1 = require("class-validator");
 class FindManyTransaction extends entity_1.FindMany {

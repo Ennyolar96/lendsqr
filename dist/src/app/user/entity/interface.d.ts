@@ -1,4 +1,4 @@
-import { findOne } from "@/global/entity";
+import { findOne } from "../../../global/entity";
 export declare enum Role {
     ADMIN = "admin",
     USER = "user"

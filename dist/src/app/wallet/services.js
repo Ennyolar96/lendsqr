@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WalletServices = void 0;
-const database_1 = require("@/global/database");
+const database_1 = require("../../global/database");
 const entity_1 = require("../transaction/entity");
 const services_1 = require("../transaction/services");
-const helper_1 = require("@/global/helper");
+const helper_1 = require("../../global/helper");
 const transServices = new services_1.TransactionServices();
 class WalletServices {
     async fundWallet(data, user) {

@@ -1,4 +1,4 @@
-import { IUser } from "@/app/user/entity";
+import { IUser } from "../../../app/user/entity";
 export interface signUp extends Pick<IUser, "firstName" | "email" | "lastName" | "password" | "phoneNumber"> {
 }
 export interface signIn extends Pick<signUp, "email" | "password"> {
