@@ -3,7 +3,7 @@ import type { Knex } from "knex";
 export async function up(knex: Knex): Promise<void> {
   return knex.schema
     .createTable("users", function (table) {
-      table.uuid("id").primary().defaultTo(knex.raw("UUID()"));
+      table.uuid("id").primary().defaultTo(knex.raw("(UUID())"));
       table.string("email").notNullable().unique();
       table.string("phoneNumber", 20).notNullable().unique();
       table.string("password").notNullable();
@@ -17,7 +17,7 @@ export async function up(knex: Knex): Promise<void> {
       table.timestamp("updatedAt").defaultTo(knex.fn.now());
     })
     .createTable("wallets", (table) => {
-      table.uuid("id").primary().defaultTo(knex.raw("UUID()"));
+      table.uuid("id").primary().defaultTo(knex.raw("(UUID())"));
       table.uuid("user").references("id").inTable("users");
       table.decimal("balance", 19, 4).defaultTo(0.0);
       table.string("currency", 3).defaultTo("NGN");
@@ -27,7 +27,7 @@ export async function up(knex: Knex): Promise<void> {
       table.timestamp("updatedAt").defaultTo(knex.fn.now());
     })
     .createTable("transactions", (table) => {
-      table.uuid("id").primary().defaultTo(knex.raw("UUID()"));
+      table.uuid("id").primary().defaultTo(knex.raw("(UUID())"));
       table.uuid("wallet").references("id").inTable("wallets");
       table.uuid("user").references("id").inTable("users");
       table.string("transactionType", 20).notNullable();
