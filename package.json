@@ -1,12 +1,12 @@
 {
   "name": "lendsqr",
   "version": "1.0.0",
-  "main": "dist/server.js",
+  "main": "dist/src/server.js",
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
-    "start": "node dist/server.js",
+    "start": "node dist/src/server.js",
     "tsc:watch": "npx tsc --watch",
     "nodemon": "nodemon -r tsconfig-paths/register src/server.ts",
     "start:dev": "npm-run-all --parallel tsc:watch nodemon"
