@@ -20,6 +20,8 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.disable("x-powered-by");
 app.use(express.urlencoded({ extended: true }));
+
+// routes setup
 ApplicationRoutes(app);
 
 app.use((req: Request, res: Response, next: NextFunction) => {

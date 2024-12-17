@@ -7,6 +7,9 @@ const auth_1 = __importDefault(require("./auth"));
 const user_1 = __importDefault(require("./user"));
 const wallet_1 = __importDefault(require("./wallet"));
 const ApplicationRoutes = (app) => {
+    app.get("/", (req, res) => {
+        res.send("Hello, World!");
+    });
     app.use("/api/v1/auth/", auth_1.default);
     app.use("/api/v1/", user_1.default);
     app.use("/api/v1/wallet/", wallet_1.default);
